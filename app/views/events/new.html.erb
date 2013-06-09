@@ -1,0 +1,26 @@
+<h1>Add a new event</h1>
+<%= form_for @event do |f| %>
+  <% if @event.errors.any? %>
+  <h2>Errors:</h2>
+  <ul>
+    <% @event.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+  </ul>
+  <% end %>
+  <p>
+    <%= f.label :title %>
+    <%= f.text_field :title%>
+  </p>
+  <p>
+    <%= f.label :date %>
+    <%= f.date_select :date%>
+  </p>
+  <p>
+  	<%= f.label :content %>
+    <%= f.text_area :content%>
+  </p>
+  <p>
+    <%= f.submit "Add a new event" %>
+  </p>
+<% end %>
