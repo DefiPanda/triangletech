@@ -1,6 +1,6 @@
 <h2> <%= @event.title %> </h2>
 <h4> <%= @event.date %> </h4>
-<p> <%= @event.content %> </p>
+<p> <%= raw(@event.content) %> </p>
 
 <%= link_to "Edit", edit_event_path(@event) %> 
 <%= link_to "Delete", @event, :confirm => "Are you sure you want to delete this event?", :method => :delete %> 
