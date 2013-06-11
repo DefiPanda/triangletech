@@ -116,6 +116,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   font-awesome-sass-rails
   jquery-rails
+  json
   rails (= 3.2.13)
   sass-rails (~> 3.2.3)
   simple_calendar (~> 0.1.9)

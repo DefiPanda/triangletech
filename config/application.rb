@@ -1,5 +1,8 @@
 require File.expand_path('../boot', __FILE__)
-
+require 'net/http'
+require "uri"
+require 'time'
+require 'date'
 require 'rails/all'
 
 if defined?(Bundler)

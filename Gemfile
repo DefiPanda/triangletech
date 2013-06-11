@@ -10,6 +10,7 @@ gem "jquery-rails"
 gem "simple_calendar", "~> 0.1.9"
 gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
+gem 'json'
 
 
 # Gems used only for assets and not required
