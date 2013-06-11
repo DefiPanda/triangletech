@@ -3,3 +3,11 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .calendar td { height: 100px; width: 14.28%; }
+
+ul li:before {
+   content: "•";
+   margin-right:3px;
+   margin-left:3px;
+   float:left;
+   font-size: 350%;
+}
