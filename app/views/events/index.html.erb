@@ -1,7 +1,7 @@
 <ul>
 <%= calendar @events do |event| %>
   <li>
-    <%= link_to event.title, event %>
+    <%= link_to "#{event.title} [#{event.organizer}]", event %>
   </li>
 <% end %>
 </ul>

@@ -1,5 +1,7 @@
 <h2> <%= @event.title %> </h2>
-<h4> <%= @event.date %> </h4>
+<h5> <%= @event.date %> </h5>
+<h5> Organizer <%= @event.organizer %> </h5>
+<h5> <%= link_to "Click here for registration info" ,@event.link %> </h5>
 <p> <%= raw(@event.content) %> </p>
 
 <%= link_to "Edit", edit_event_path(@event) %> 

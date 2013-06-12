@@ -13,7 +13,9 @@ result = JSON.parse(response.body)
 
 result["results"].each do |event|
   date = Time.at(event["time"]/1000.0)
-  title = (event["name"] + " @ " + event["group"]["name"])[0,99]
+  title = event["name"][0,99]
+  organizer = event["group"]["name"]
   content = event["description"]
-  Event.create!(:content => content, :date=> date, :title=> title)
+  link = event["event_url"]
+  Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
 end
