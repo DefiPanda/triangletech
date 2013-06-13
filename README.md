@@ -13,4 +13,4 @@ If you have anything you want to add or modify, by all means go ahead, write you
 
 How to access online?  
 ---  
-[a link](http://triangletech.herokuapp.com/)
+[Please click here to go to this app](http://triangletech.herokuapp.com/)
