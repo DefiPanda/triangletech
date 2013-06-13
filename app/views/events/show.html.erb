@@ -1,8 +1,10 @@
+<div class="container">
 <h2> <%= @event.title %> </h2>
 <h5> <%= @event.date %> </h5>
-<h5> Organizer <%= @event.organizer %> </h5>
+<h5> Organizer: <%= @event.organizer %> </h5>
 <h5> <%= link_to "Click here for registration info" ,@event.link %> </h5>
 <p> <%= raw(@event.content) %> </p>
 
 <%= link_to "Edit", edit_event_path(@event) %> 
 <%= link_to "Delete", @event, :confirm => "Are you sure you want to delete this event?", :method => :delete %> 
+</div>
