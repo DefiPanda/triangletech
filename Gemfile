@@ -5,12 +5,17 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem "jquery-rails"
 gem "simple_calendar", "~> 0.1.9"
 gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
 gem 'json'
+
+group :development, :test do 
+  gem 'sqlite3'
+end
+
+gem 'pg'
 
 
 # Gems used only for assets and not required
