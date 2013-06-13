@@ -7,4 +7,8 @@ class Event < ActiveRecord::Base
   def start_time
     date
   end
+
+  def self.pair_exists?(date, title, organizer)
+    Event.find_all_by_date_and_title_and_organizer(date, title, organizer).any?
+  end
 end

@@ -22,7 +22,9 @@ result["results"].each do |event|
   organizer = event["group"]["name"]
   content = event["description"]
   link = event["event_url"]
-  Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
+  if Event.pair_exists?(date, title, organizer) == false
+    Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
+  end
 end
 
 # this is for querying some tech events within 50 miles of Durham,NC on Eventbrite
@@ -41,5 +43,7 @@ result.each do |event_wrapper|
   organizer = event["organizer"]["name"]
   content = event["description"]
   link = event["url"]
-  Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
+  if Event.pair_exists?(date, title, organizer) == false
+    Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
+  end
 end
