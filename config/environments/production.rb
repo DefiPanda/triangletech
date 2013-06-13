@@ -20,6 +20,9 @@ Triangletech::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Google Analytics tracking number
+  GA.tracker = "UA-41702517-1"
+
   # Defaults to nil and saved in location specified by config.assets.prefix
   # config.assets.manifest = YOUR_PATH
 

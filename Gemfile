@@ -16,6 +16,7 @@ group :development, :test do
 end
 
 gem 'pg'
+gem 'google-analytics-rails'
 
 
 # Gems used only for assets and not required
