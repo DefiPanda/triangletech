@@ -10,7 +10,14 @@ A calender that user can CRUD events, a simple but beautiful calendar UI, and th
 Contribute to this repo  
 ---  
 If you have anything you want to add or modify, by all means go ahead, write your code and make a pull request. Take a look at issue list can always be a good idea at getting to know what to build next.  
+Use these commands to get it up and running:  
+bundle install  
+rake db:migrate  
+rails runner script/add_data.rb  
+rails s -p 8000  
+Then you can visit the calendar at: localhost:8000
 
 How to access online?  
 ---  
-[Please click here to go to this app.](http://triangletech.herokuapp.com/)
+[Please click here to go to this app.](http://triangletech.herokuapp.com/)  
+Currently the script to update the database runs everyday at 00:00 UTC.
