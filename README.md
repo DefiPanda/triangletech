@@ -20,4 +20,4 @@ Then you can visit the calendar at: localhost:8000
 How to access online?  
 ---  
 [Please click here to go to this app.](http://triangletech.herokuapp.com/)  
-Currently the script to update the database runs everyday at 00:00 UTC.
+Currently the script to update the database runs everyday at 09:00 UTC.
