@@ -28,7 +28,7 @@ result["results"].each do |event|
 end
 
 # this is for querying some tech events within 50 miles of Durham,NC on Eventbrite
-keywords = ["ruby", "javascript", "start-up", "startup", "python", "php", "web", "data", "entrepreneur", "java", "C", "hack"]
+keywords = ["ruby", "javascript", "start-up", "startup", "python", "php", "web", "data", "entrepreneur", "java", "C", "hack", "social media", "online marketing", "user design", "ui", "ui/ux", "venture capital", "fundraising"]
 base_url = "https://www.eventbrite.com/json/event_search?app_key=WSNTTAWEAGBXTF6DEZ&postal_code=27701&within=50&keywords="
 keywords_string = ""
 keywords.each { |keyword| keywords_string << keyword << "%20OR%20" }
