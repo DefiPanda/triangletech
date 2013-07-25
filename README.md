@@ -1,5 +1,6 @@
 triangletech
-============
+============  
+[![Code Climate](https://codeclimate.com/github/jw2013/triangletech.png)](https://codeclimate.com/github/jw2013/triangletech)  
 
 triangletech is the most comprehensive event calendar for triangle startup and tech meetings. Being in triangle area for 4 years, I always feel the great inconvinience of having to search for events I am interested on tens or hundreds of different websites because there is just not a single website does it for all. I think it will be cool to build such a site with all the triangle startup and tech events available online.  
 
