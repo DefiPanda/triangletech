@@ -11,7 +11,7 @@
 <ul>
 <%= calendar @events do |event| %>
   <li>
-    <%= link_to "#{event.title} [#{event.organizer}]", event %>
+    <%= link_to "#{event.title} [#{event.organizer}]", event, :target => '_blank' %>
   </li>
 <% end %>
 </ul>
