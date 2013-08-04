@@ -21,7 +21,7 @@ result["results"].each do |event|
   date = Time.at(event["time"]/1000.0)
   title = event["name"][0,99]
   organizer = event["group"]["name"]
-  content = event["description"] || ""
+  content = event["description"] || "There's no event description yet."
   link = event["event_url"]
   if Event.pair_exists?(date, title, organizer) == false and blacklist.any? { |s| title.downcase.include?(s) } == false
     Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
@@ -42,7 +42,7 @@ result.each do |event_wrapper|
   date = Time.parse(event["start_date"])
   title = event["title"][0,99]
   organizer = event["organizer"]["name"]
-  content = event["description"] || ""
+  content = event["description"] || "There's no event description yet."
   link = event["url"]
   if Event.pair_exists?(date, title, organizer) == false and blacklist.any? { |s| title.downcase.include?(s) } == false
     Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
