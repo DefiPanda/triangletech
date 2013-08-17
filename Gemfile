@@ -11,7 +11,6 @@ gem "simple_calendar", "~> 0.1.9"
 gem 'bootstrap-sass'
 gem 'font-awesome-sass-rails'
 gem 'json'
-gem 'google-api-client'
 
 group :development, :test do 
   gem 'sqlite3'
