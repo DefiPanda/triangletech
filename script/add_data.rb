@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'google/api_client'
+
 def getParsedJSON(url, https)
   uri = URI.parse(url)
   http = Net::HTTP.new(uri.host, uri.port)
