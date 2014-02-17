@@ -8,7 +8,7 @@ gem 'rails', '3.2.13'
 
 gem "jquery-rails"
 gem "simple_calendar", "~> 0.1.9"
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', "~> 2.3.2.1"
 gem 'font-awesome-sass-rails'
 gem 'json'
 
