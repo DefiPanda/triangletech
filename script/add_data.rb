@@ -18,7 +18,7 @@ blacklist = ["haircut", "jazz", "hip hop"]
 url = "http://api.meetup.com/2/open_events?status=upcoming&radius=50.0&category=34&limited_events=False&desc=False&offset=0&format=json&zip=27701&page=500&key=5b743fa5256266b815b22f64775a"
 result = getParsedJSON(url, 0)
 result["results"].each do |event|
-  date = Time.at(event["time"]/1000.0)
+  date = Time.at(Time.zone_offset('EST') + event["time"]/1000.0)
   title = event["name"][0,99]
   organizer = event["group"]["name"]
   content = event["description"] || "There's no event description yet."
