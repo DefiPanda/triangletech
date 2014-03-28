@@ -21,11 +21,13 @@ result["results"].each do |event|
   date = Time.at(Time.zone_offset('EST') + event["time"]/1000.0)
   title = event["name"][0,99]
   organizer = event["group"]["name"]
+  next if organizer.blank?
   content = event["description"] || "There's no event description yet."
   link = event["event_url"]
-  if Event.pair_exists?(date, title, organizer) == false and blacklist.any? { |s| title.downcase.include?(s) } == false
-    Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
-  end
+  typesite = 0
+  typeid = event["id"].to_s
+  event = Event.find_or_create_by_typeid_and_typesite!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :typesite => typesite, :typeid => typeid)
+  event.update_attributes(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
 end
 
 # this is for querying some tech events within 50 miles of Durham,NC on Eventbrite
@@ -42,9 +44,11 @@ result.each do |event_wrapper|
   date = Time.parse(event["start_date"])
   title = event["title"][0,99]
   organizer = event["organizer"]["name"]
+  next if organizer.blank?
   content = event["description"] || "There's no event description yet."
   link = event["url"]
-  if Event.pair_exists?(date, title, organizer) == false and blacklist.any? { |s| title.downcase.include?(s) } == false
-    Event.create!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
-  end
+  typesite = 1
+  typeid = event["id"].to_s
+  event = Event.find_or_create_by_typeid_and_typesite!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :typesite => typesite, :typeid => typeid)
+  event.update_attributes(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
 end
