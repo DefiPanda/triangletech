@@ -11,6 +11,7 @@ gem "simple_calendar", "~> 0.1.9"
 gem 'bootstrap-sass', "~> 2.3.2.1"
 gem 'font-awesome-sass-rails'
 gem 'json'
+gem 'devise'
 
 group :development, :test do 
   gem 'sqlite3'

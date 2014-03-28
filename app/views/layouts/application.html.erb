@@ -14,8 +14,10 @@
 </head>
 <body>
 
-<% flash.each do |key, val| %>
-  <p><%= val %></p>
+<% flash.each do |key, value| %>
+        <div class="<%= flash_class(key) %>">
+              <%= value %>
+        </div>
 <% end %>
 
 <%= yield %>
