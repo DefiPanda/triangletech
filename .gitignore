@@ -14,6 +14,9 @@
 /log/*.log
 /tmp
 
+# Ignore tmp data dump
+/script/psrygxofkwvbndxkxjyizoctwdnz.csv
+
 # Ignore heroku keys
 triangletech
 triangletech.PUB
