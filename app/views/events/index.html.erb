@@ -9,6 +9,7 @@
     Hi, <%= current_user.username %>
     <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
   <% else %>
+    Want to post/edit/delete your own events?
     <%= link_to "Sign up", new_user_registration_path %> |
     <%= link_to "Login", new_user_session_path %>
   <% end %>
