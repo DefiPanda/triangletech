@@ -4,6 +4,12 @@
 <h5> Organizer: <%= @event.organizer %> </h5>
 <h5> <%= link_to "Click here for registration info" ,@event.link %> </h5>
 <p> <%= raw(@event.content) %> </p>
-
-<%= link_to "Edit", edit_event_path(@event) %> 
+<% if current_user.username.blank? == false %>
+  ---- <br>
+  <p> Poster: <%= @event.username %> </p>
+<% end %>
+<% if @event.username == current_user.username %>
+ <%= link_to "Edit", edit_event_path(@event) %>
+ <%= link_to "Delete", @event, :confirm => "Are you sure you want to delete this event?", :method => :delete %> 
+<% end %>
 </div>

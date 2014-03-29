@@ -15,9 +15,11 @@
 <body>
 
 <% flash.each do |key, value| %>
-        <div class="<%= flash_class(key) %>">
-              <%= value %>
-        </div>
+  <% if value != "You are already signed in." %>
+    <div class="<%= flash_class(key) %>">
+          <%= value %>
+    </div>
+  <% end %>
 <% end %>
 
 <%= yield %>

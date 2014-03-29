@@ -24,6 +24,7 @@ class EventsController < ApplicationController
 
 	def create
       @event = Event.new(params[:event])
+      puts @event
       if @event.save
          redirect_to events_path, :notice => "Your event is successfully added!"
       else
@@ -42,5 +43,11 @@ class EventsController < ApplicationController
       else
         render "edit"
       end
+  end
+
+  def destroy
+      @event = Event.find(params[:id])
+      @event.destroy
+      redirect_to events_path, :notice => "Your event is successfully deleted"
   end
 end

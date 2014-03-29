@@ -7,6 +7,7 @@
       <% end %>
     </ul>
   <% end %>
+  <%= f.hidden_field :username, :value => current_user.username  %>
   <p>
     <%= f.label :title %>
     <%= f.text_field :title%>

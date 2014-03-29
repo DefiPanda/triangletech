@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20140328202606) do
     t.string   "title"
     t.text     "content"
     t.date     "date"
+    t.string   "username"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.string   "link"

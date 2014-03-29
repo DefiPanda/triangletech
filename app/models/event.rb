@@ -1,5 +1,5 @@
 class Event < ActiveRecord::Base
-  attr_accessible :content, :date, :title, :organizer, :typesite, :typeid, :link
+  attr_accessible :content, :date, :title, :organizer, :typesite, :typeid, :link, :username
   belongs_to :user
   validates :content, :date, :title, :organizer, :presence => true
   validates :title, :length => {:maximum => 100}
