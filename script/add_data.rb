@@ -26,8 +26,8 @@ result["results"].each do |event|
   link = event["event_url"]
   typesite = 0
   typeid = event["id"].to_s
-  event = Event.find_or_create_by_typeid_and_typesite!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :typesite => typesite, :typeid => typeid)
-  event.update_attributes(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
+  event = Event.find_or_create_by_typeid_and_typesite!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :typesite => typesite, :typeid => typeid, :username=> "triangletech")
+  event.update_attributes(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :username=> "triangletech")
 end
 
 # this is for querying some tech events within 50 miles of Durham,NC on Eventbrite
@@ -49,6 +49,6 @@ result.each do |event_wrapper|
   link = event["url"]
   typesite = 1
   typeid = event["id"].to_s
-  event = Event.find_or_create_by_typeid_and_typesite!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :typesite => typesite, :typeid => typeid)
-  event.update_attributes(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link)
+  event = Event.find_or_create_by_typeid_and_typesite!(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :typesite => typesite, :typeid => typeid, :username=> "triangletech")
+  event.update_attributes(:content => content, :date=> date, :title=> title, :organizer=> organizer, :link=> link, :username=> "triangletech")
 end
