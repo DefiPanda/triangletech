@@ -8,7 +8,7 @@ License
 ---  
 The MIT License (MIT)  
 
-Copyright (c) 2013 Jack Wang  
+Copyright (c) 2013 Zhe Wang  
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -29,7 +29,11 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 What triangletech have?  
 ---  
-A calender that user can CRUD events, a simple but beautiful calendar UI, and the script to auto discover and add tech/startup events through Meetup and Eventbrite APIs.
+A calender that user can CRUD events, a simple but beautiful calendar UI, and the script to auto discover and add tech/startup events through Meetup and Eventbrite APIs.  
+  
+Support this project  
+---  
+Help us make this project viable through tipping! [Link to my gittip profile.](https://www.gittip.com/jw2013/)  
   
 Contribute to this repo  
 ---  
@@ -40,8 +44,8 @@ rake db:migrate
 rails runner script/add_data.rb  
 rails s -p 8000  
 ```  
-Then you can visit the calendar at: localhost:8000
-
+Then you can visit the calendar at: localhost:8000  
+  
 How to access online?  
 ---  
 [Please click here to go to this app.](http://www.triangletech.co)  
